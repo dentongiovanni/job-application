@@ -34,7 +34,7 @@ docker-compose up -d; docker exec -it jobapp_php sh -c "composer install --no-de
 ### 4. Login Credentials
 
 - **Email:** `admin@dswd.gov`
-- **Password:** _(Defined in the seeder)_
+- **Password:** `password`
 
 
 ### 5. (Optional) Run Unit Tests
