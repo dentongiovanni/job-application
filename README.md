@@ -11,8 +11,7 @@ Rename `.env.example` to `.env`:
 
 ```sh
 mv .env.example .env
-
----
+```
 
 ### 3. Start the Application
 
