@@ -1,44 +1,66 @@
-Job Application Web App
+### 1. Install Docker
 
-Installation Guide
-
-1. Install Docker
-
-Download and install Docker Desktop from:
-🔗 https://www.docker.com/products/docker-desktop/
+Download and install Docker Desktop from:  
+🔗 [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
 Ensure Docker is running before proceeding.
 
-2. Set Up Environment Variables
+### 2. Set Up Environment Variables
 
-Rename .env.example to .env in the project root directory.
+Rename `.env.example` to `.env`:
 
+```sh
 mv .env.example .env
 
-3. Start the Application
+---
 
-Run the following command inside the directory where the docker-compose.yml file is located:
+### 3. Start the Application
 
+Run the following command inside the directory where `docker-compose.yml` is located:
+
+```sh
 docker-compose up -d; docker exec -it jobapp_php sh -c "composer install --no-dev --optimize-autoloader && php artisan migrate --force && php artisan db:seed && npm install && npm run build"
 
-🔹 Note:Ensure ports 3306 (MySQL) and 80 (NGINX/Apache) are not in use before running the command.
 
-📌 Example Directory Structure:
 
-C:\Users\Lenovo\Documents\products\job-application> docker-compose up -d; docker exec -it jobapp_php sh -c "composer install --no-dev --optimize-autoloader && php artisan migrate --force && php artisan db:seed && npm install && npm run build"
 
-What this command does:
+---
 
-✅ Downloads all dependencies✅ Runs database migrations✅ Seeds data from an Excel file✅ Creates authentication credentials✅ Builds the web app
+### **6. Use Tables for Features (Optional)**  
+Tables can help make information clearer.
 
-4. Login Credentials
+```md
+| ✅ Feature                     | Description                           |
+|--------------------------------|---------------------------------------|
+| 📦 **Dependency Install**      | Installs all necessary dependencies  |
+| 🗄️ **Database Migration**      | Runs `php artisan migrate --force`   |
+| 📊 **Seeding Data**            | Seeds data from an Excel file        |
+| 🔑 **Authentication Setup**    | Creates default credentials          |
+| 🌐 **Frontend Build**          | Runs `npm install && npm run build`  |
 
-Once the setup is complete, you can log in with:
 
-Email: admin@dswd.gov
 
-Password: (as defined in the seeder)
+### 4. Login Credentials
 
-5. (Optional) Run Unit Tests
+- **Email:** `admin@dswd.gov`
+- **Password:** _(Defined in the seeder)_
 
-To verify functionality, run the unit test for ApplicantService:
+
+### 5. (Optional) Run Unit Tests
+
+Run the unit test for `ApplicantService`:
+
+```sh
+docker exec -it jobapp_php sh -c "php artisan test --filter=ApplicantServiceTest"
+
+
+
+---
+
+### **9. Add a Closing Statement**
+```md
+## 🎯 You're All Set! 🚀
+
+Your job application web app should now be running. Let me know if you need any modifications!
+
+
