@@ -53,7 +53,7 @@ docker exec -it jobapp_php sh -c "php artisan test --filter=ApplicantServiceTest
 ### 🎯 You're All Set! 🚀
 ```md
 Your job application web app should now be running. Let me know if you need any modifications!
-
+```
 
 
 ### LOGIN
