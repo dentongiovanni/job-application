@@ -20,9 +20,6 @@ Run the following command inside the directory where `docker-compose.yml` is loc
 ```sh
 docker-compose up -d; docker exec -it jobapp_php sh -c "composer install --no-dev --optimize-autoloader && php artisan migrate --force && php artisan db:seed && npm install && npm run build"
 ```
-
-###  Use Tables for Features (Optional)**  
-
 ```md
 | ✅ Feature                     | Description                           |
 |--------------------------------|---------------------------------------|
