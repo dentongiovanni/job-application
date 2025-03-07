@@ -19,14 +19,9 @@ Run the following command inside the directory where `docker-compose.yml` is loc
 
 ```sh
 docker-compose up -d; docker exec -it jobapp_php sh -c "composer install --no-dev --optimize-autoloader && php artisan migrate --force && php artisan db:seed && npm install && npm run build"
+```
 
-
-
-
----
-
-### **6. Use Tables for Features (Optional)**  
-Tables can help make information clearer.
+###  Use Tables for Features (Optional)**  
 
 ```md
 | ✅ Feature                     | Description                           |
@@ -36,7 +31,7 @@ Tables can help make information clearer.
 | 📊 **Seeding Data**            | Seeds data from an Excel file        |
 | 🔑 **Authentication Setup**    | Creates default credentials          |
 | 🌐 **Frontend Build**          | Runs `npm install && npm run build`  |
-
+```
 
 
 ### 4. Login Credentials
@@ -51,15 +46,13 @@ Run the unit test for `ApplicantService`:
 
 ```sh
 docker exec -it jobapp_php sh -c "php artisan test --filter=ApplicantServiceTest"
-
+```
 
 
 ---
 
-### **9. Add a Closing Statement**
+### 🎯 You're All Set! 🚀
 ```md
-## 🎯 You're All Set! 🚀
-
 Your job application web app should now be running. Let me know if you need any modifications!
 
 
